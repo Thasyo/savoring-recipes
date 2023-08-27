@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import styles from '../Home/Home.module.css'
 
 import Search from '../../components/Search/Search'
-import MenuOptionProfileOff from '../../components/MenuOptionProfileOff/MenuOptionProfileOff'
-import MenuOptionProfileOn from '../../components/MenuOptionProfileOn/MenuOptionProfileOn'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 
@@ -125,8 +123,6 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <Search/>
-      <MenuOptionProfileOff/>
-      {/* <MenuOptionProfileOn/> */}
       <p className={styles.quote}>" Cozinhar é uma arte que envolve todos os sentidos. É a união de sabores, aromas, texturas e amor. "</p>
       <h1><span className={styles.titleBorderCategory}>t</span> Café da manhã</h1>
       <div className={styles.containerCards}>

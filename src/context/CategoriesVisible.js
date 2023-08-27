@@ -6,8 +6,10 @@ export const CategoriesProvider = ({children}) => {
 
     const [isVisible, setIsVisible] = useState(false)
 
+    const [isVisibleProfile, setIsVisibleProfile] = useState(false)
+
     return (
-        <CategoriesVisibleContext.Provider value={{isVisible, setIsVisible}}>
+        <CategoriesVisibleContext.Provider value={{isVisible, setIsVisible, isVisibleProfile, setIsVisibleProfile}}>
             {children}
         </CategoriesVisibleContext.Provider>
     )

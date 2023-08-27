@@ -1,17 +1,32 @@
 import React from 'react'
 
+import { CgProfile } from "react-icons/cg";
+
 import styles from '../MenuOptionProfileOn/MenuOptionProfileOn.module.css'
 
 import { NavLink } from 'react-router-dom'
 
+import { useCategoriesVisibleContext } from '../../context/CategoriesVisible';
+
+
 const MenuOptionProfileOn = () => {
+
+  const {isVisibleProfile, setIsVisibleProfile} = useCategoriesVisibleContext();
+
+  const toggleVisible = () => {
+    setIsVisibleProfile(!isVisibleProfile);
+  } 
+
   return (
-    <div className={styles.menuOptionProfileOn}>
-        <div>
-            <NavLink>Editar Perfil</NavLink>
-            <NavLink>Favoritos</NavLink>
-            <NavLink>Sair</NavLink>
-        </div>
+    <div>
+      <CgProfile className={styles.iconProfile} onClick={() => toggleVisible()}/>
+      <div className={isVisibleProfile ? styles.menuOptionProfileOn : styles.none}>
+          <div>
+              <NavLink>Editar Perfil</NavLink>
+              <NavLink>Favoritos</NavLink>
+              <NavLink>Sair</NavLink>
+          </div>
+      </div>
     </div>
   )
 }

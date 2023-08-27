@@ -3,13 +3,24 @@
     justify-content: end;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
+    animation: slideToSide .5s forwards;
+}
+
+@keyframes slideToSide {
+    to{
+        transform: translateX(0);
+    }
+
+    from{
+        transform: translateX(100%);
+    }
+
 }
 
 .menuOptionProfileOn div{
     display: flex;
-    flex-direction: column;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 2px 5px #838383;
@@ -29,4 +40,20 @@
 .menuOptionProfileOn div a:hover{
     color: #d67a00;
     transition: .2s;
+}
+
+.iconProfile{
+    color: #ff9000;
+    font-size: 2.5em;
+    margin-right: 50px;
+}
+
+.iconProfile:hover{
+    cursor: pointer;
+    font-size: 2.6em;
+    transition: .1s;
+}
+
+.none{
+    display: none;
 }
