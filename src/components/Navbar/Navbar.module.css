@@ -1,0 +1,124 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 100px;
+}
+
+.link{
+    width: 100%;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ff9000;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    border-bottom: solid 0.5px #ff910048;
+    border-top: solid 0.5px #ff910048;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+}
+
+.iconNavBar{
+    color: #ff9000;
+    font-size: 1.1em;
+    margin: 0px 5px 0px 5px;
+    padding-right: 20px;
+}
+
+.iconNavBarArrow{
+    color: #ff9000;
+    font-size: 1.1em;
+    margin: 0px 2px 0px 10px;
+}
+
+.animationArrow{
+    color: #ff9000;
+    font-size: 1.1em;
+    margin: 0px 2px 0px 10px;
+    animation: rotate .5s forwards;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(450deg);
+    }
+  }
+
+.active{
+    width: 100%;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #ff9000;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.iconNavBarActive{
+    color: #fff;
+    font-size: 1.1em;
+    margin: 0px 5px 0px 5px;
+}
+
+.categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: slide-down .5s forwards;
+}
+
+@keyframes slide-down {
+    0%{
+        max-height: 0;
+        opacity: 0;
+    }
+
+    100%{
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+.none{
+    display: none;
+}
+
+.categories h2{
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ff9000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10%;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 20px 40px;
+}
+
+ul a{
+    color: #ff9000;
+    text-decoration: none;
+    padding: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+ul a:hover{
+    color: #d67a00;
+    transition: .2s;
+}

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+textarea:focus, input:focus, select:focus {
+    color: #c67b1a;
+    font-weight: 600;
+    outline: none;
+}
+
+input::placeholder{
+    color: #b3936a;
+}
+
+.title-border{
+    width: 10px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #ff9000;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    height: 0;     
+}
+
+::-webkit-scrollbar-track {
+    background: #ff91003f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff9100b7;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #888; 
+}
+
+.btn-recipes{
+    background-color: #ff9000;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.btn-recipes:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.3s;
+    color: #8383836f;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: #ff9000;
+    width: 14px;
+}
+
+.swiper-pagination-bullet-active{
+    color: #ff9000;
+}
+
+.swiper-pagination-bullet{
+    color: #838383;
+}
+  
+  
+  
+  
+  
