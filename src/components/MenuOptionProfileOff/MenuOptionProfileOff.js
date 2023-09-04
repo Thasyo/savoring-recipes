@@ -22,8 +22,8 @@ const MenuOptionProfileOff = () => {
       <CgProfile className={styles.iconProfile} onClick={() => toggleVisible()}/>
       <div className={isVisibleProfile ? styles.menuOptionProfileOff : styles.none}>
         <div>
-            <NavLink>Login</NavLink>
-            <NavLink>Cadastro</NavLink>
+            <NavLink to='/login' onClick={() => toggleVisible()}>Entrar</NavLink>
+            <NavLink to='/register' onClick={() => toggleVisible()}>Cadastro</NavLink>
         </div>
     </div>
     </div>

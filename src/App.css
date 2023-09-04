@@ -11,13 +11,12 @@
 }
 
 textarea:focus, input:focus, select:focus {
-    color: #c67b1a;
-    font-weight: 600;
     outline: none;
 }
 
 input::placeholder{
     color: #b3936a;
+    font-style: italic;
 }
 
 .title-border{

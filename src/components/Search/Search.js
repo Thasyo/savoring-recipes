@@ -4,8 +4,6 @@ import styles from '../Search/Search.module.css'
 
 import { IoSearchCircleSharp } from "react-icons/io5";
 
-
-
 import MenuOptionProfileOff from '../../components/MenuOptionProfileOff/MenuOptionProfileOff'
 /* import MenuOptionProfileOn from '../../components/MenuOptionProfileOn/MenuOptionProfileOn' */
 
@@ -18,7 +16,7 @@ const Search = () => {
             <IoSearchCircleSharp className={styles.iconSearch}/>
         </form>
         <MenuOptionProfileOff/>
-        {/* <MenuOptionProfileOn/> */}
+        {/* {<MenuOptionProfileOn/>} */}
 
     </div>
   )

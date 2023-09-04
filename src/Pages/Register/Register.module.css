@@ -1,0 +1,158 @@
+.register{
+    width: 85vw;
+    height: 100vh;
+    margin-left: 230px;
+}
+
+.register img{
+    width: 100%;
+}
+
+.infoRegister{
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 120px;
+    margin-left: 350px;
+    padding: 15px 50px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px #ff910047;
+}
+
+.iconRegisteTitle{
+    margin-right: 15px;
+}
+
+.infoRegister h1{
+    color: #ff9000;
+    letter-spacing: 1.5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.infoRegister div{
+    background-color: #fff;
+    color: #838383;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: justify;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ff910047;
+    padding: 10px;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.infoRegister form{
+    display: flex;
+    flex-direction: column;
+    color: #ff9000;
+    font-weight: 750;
+    width: 100%;
+}
+
+.infoRegister form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.lastLabel{
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #ff9000;
+}
+
+.infoRegister form label input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px #ff910047;
+}
+
+.infoRegister form label input:focus{
+    border: solid 1px #ff9000;
+}
+
+.btnRegister{
+    color: #fff;
+    background-color: #ff9000;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnRegister:hover, .btnRegisterGoogle:hover, .existLogin button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #ff91006a;
+    transition: .2s;
+}
+
+.btnRegisterGoogle{
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 5px;
+    margin-top: 10px;
+    border: solid 1px #ff9000;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.FcGoogle{
+    position: absolute;
+    left: 55px;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+.existLogin{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.existLogin p{
+    color: #000;
+    font-weight: 700;
+}
+
+.existLogin button{
+    color: #ff9000;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 2px 5px;
+    margin-left: 15px;
+    width: 100px;
+    border: solid 1px #ff9000;
+    border-radius: 10px;
+}
+

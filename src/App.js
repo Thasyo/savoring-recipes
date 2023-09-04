@@ -12,6 +12,8 @@ import Courses from './Pages/Courses/Courses';
 import CustomRecipes from './Pages/CustomRecipes/CustomRecipes';
 import Donate from './Pages/Donate/Donate';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 import Suport from './Pages/Suport/Suport';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -31,6 +33,9 @@ function App() {
             <Route path='/Donate' element={<Donate/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/suport' element={<Suport/>}/>
+
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
           </Routes>
         </BrowserRouter>
       </CategoriesProvider>

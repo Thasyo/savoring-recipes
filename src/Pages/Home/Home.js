@@ -141,7 +141,7 @@ const Home = () => {
                   <button className='btn-recipes'>Ver Receita</button>
                 </div>
               </SwiperSlide>
-            )) : 'Not Found'}
+            )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
@@ -162,7 +162,7 @@ const Home = () => {
                       <button className='btn-recipes'>Ver Receita</button>
                     </div>
                   </SwiperSlide>
-                )) : 'Not Found'}
+                )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
@@ -183,7 +183,7 @@ const Home = () => {
                       <button className='btn-recipes'>Ver Receita</button>
                     </div>
                   </SwiperSlide>
-                )) : 'Not Found'}
+                )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
@@ -204,7 +204,7 @@ const Home = () => {
                       <button className='btn-recipes'>Ver Receita</button>
                     </div>
                   </SwiperSlide>
-                )) : 'Not Found'}
+                )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
@@ -225,7 +225,7 @@ const Home = () => {
                       <button className='btn-recipes'>Ver Receita</button>
                     </div>
                   </SwiperSlide>
-                )) : 'Not Found'}
+                )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
@@ -246,7 +246,7 @@ const Home = () => {
                 <button className='btn-recipes'>Ver Receita</button>
               </div>
             </SwiperSlide>
-          )) : 'Not Found'}
+          )) : 'Carregando. . .'}
         </Swiper>
       </div>
 
@@ -267,7 +267,7 @@ const Home = () => {
                   <button className='btn-recipes'>Ver Receita</button>
                 </div>
               </SwiperSlide>
-            )) : 'Not Found'}
+            )) : 'Carregando. . .'}
           </Swiper>
       </div>
 
