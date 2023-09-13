@@ -75,6 +75,13 @@ input::placeholder{
 .swiper-pagination-bullet{
     color: #838383;
 }
+
+.error{
+    font-size: 12px;
+    color: rgba(255, 117, 53, 0.667);
+    padding: 5px 2px;
+    margin-bottom: 10px;
+}
   
   
   

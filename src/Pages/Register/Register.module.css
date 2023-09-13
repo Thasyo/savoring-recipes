@@ -108,30 +108,6 @@
     transition: .2s;
 }
 
-.btnRegisterGoogle{
-    background-color: #fff;
-    color: #000;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    padding: 5px;
-    margin-top: 10px;
-    border: solid 1px #ff9000;
-    border-radius: 10px;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.FcGoogle{
-    position: absolute;
-    left: 55px;
-    font-size: 1.2em;
-    margin: 5px;
-}
-
 .existLogin{
     width: 100%;
     display: flex;
