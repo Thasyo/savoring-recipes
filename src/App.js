@@ -23,6 +23,8 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Suport from './Pages/Suport/Suport';
+import EditProfile from './Pages/EditProfile/EditProfile';
+import Favorites from './Pages/Favorites/Favorites';
 
 //react, hooks, router dom
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -63,6 +65,9 @@ function App() {
 
               <Route path='/login' element={<Login/>}/>
               <Route path='/register' element={<Register/>}/>
+
+              <Route path='/editProfile' element={<EditProfile/>}/>
+              <Route path='/favorites' element={<Favorites/>}/>
             </Routes>
           </BrowserRouter>
         </CategoriesProvider>

@@ -22,8 +22,8 @@ const MenuOptionProfileOn = () => {
       <CgProfile className={styles.iconProfile} onClick={() => toggleVisible()}/>
       <div className={isVisibleProfile ? styles.menuOptionProfileOn : styles.none}>
           <div>
-              <NavLink>Editar Perfil</NavLink>
-              <NavLink>Favoritos</NavLink>
+              <NavLink to='/editProfile' onClick={() => toggleVisible()}>Editar Perfil</NavLink>
+              <NavLink to='/favorites' onClick={() => toggleVisible()}>Favoritos</NavLink>
               <NavLink>Sair</NavLink>
           </div>
       </div>
