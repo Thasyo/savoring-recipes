@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { useAuthentication } from '../../hooks/useAuthetication';
 
+
 //styles
 import styles from '../Register/Register.module.css'
 
@@ -89,7 +90,7 @@ const Register = () => {
                     </label>
 
                     {!loading && <button className={styles.btnRegister}>Cadastrar</button>}
-                    {loading && <button className={styles.btnRegister} disabled>Aguarde...</button>}
+                    {loading && <button className={styles.btnRegister} disabled  >Aguarde...</button>}
                     
                 </form>
 
@@ -99,7 +100,7 @@ const Register = () => {
                 </span>
 
                 <div>
-                    <p>A Saboreando Recitas processa os dados coletados para a criação da sua área de usuário e da comunidade Chefzando. Para saber mais sobre como gerenciar seus dados pessoais e exercer seus direitos, consulte nossa Política de Proteção de Dados Pessoais.</p>
+                    <p>A Saboreando Receitas processa os dados coletados para a criação da sua área de usuário e da comunidade Chefzando. Para saber mais sobre como gerenciar seus dados pessoais e exercer seus direitos, consulte nossa Política de Proteção de Dados Pessoais.</p>
                 </div>
             </div>
     </div>

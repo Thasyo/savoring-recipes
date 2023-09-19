@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 
 import { useCategoriesVisibleContext } from '../../context/CategoriesVisible';
 
+import { useAuthentication } from '../../hooks/useAuthetication';
 
 const MenuOptionProfileOn = () => {
 
@@ -17,6 +18,13 @@ const MenuOptionProfileOn = () => {
     setIsVisibleProfile(!isVisibleProfile);
   } 
 
+  const { logout } = useAuthentication();
+
+  const handleLogout = () => {
+    logout()
+    toggleVisible()
+  }
+
   return (
     <div>
       <CgProfile className={styles.iconProfile} onClick={() => toggleVisible()}/>
@@ -24,7 +32,7 @@ const MenuOptionProfileOn = () => {
           <div>
               <NavLink to='/editProfile' onClick={() => toggleVisible()}>Editar Perfil</NavLink>
               <NavLink to='/favorites' onClick={() => toggleVisible()}>Favoritos</NavLink>
-              <NavLink>Sair</NavLink>
+              <NavLink to='/' onClick={handleLogout}>Sair</NavLink>
           </div>
       </div>
     </div>
