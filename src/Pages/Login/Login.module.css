@@ -3,3 +3,140 @@
     height: 100vh;
     margin-left: 230px;
 }
+
+.login img{
+    width: 100%;
+}
+
+.infoLogin{
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 170px;
+    margin-left: 480px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px #ff910047;
+}
+
+.iconLoginTitle{
+    margin-right: 15px;
+}
+
+.infoLogin h1{
+    color: #ff9000;
+    letter-spacing: 1.5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.infoLogin div{
+    background-color: #fff;
+    color: #838383;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: justify;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ff910047;
+    padding: 10px;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.infoLogin form{
+    display: flex;
+    flex-direction: column;
+    color: #ff9000;
+    font-weight: 750;
+    width: 100%;
+}
+
+.infoLogin form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.forgetPassword{
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #ff9000;
+}
+
+.forgetPassword a{
+    font-size: 12px;
+    color: #00000095;
+}
+
+.forgetPassword a:hover{
+    color: #000000c6;
+    transition: .3s;
+}
+
+.infoLogin form label input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px #ff910047;
+}
+
+.infoLogin form label input:focus{
+    border: solid 1px #ff9000;
+}
+
+.btnLogin{
+    color: #fff;
+    background-color: #ff9000;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogin:hover, .btnLoginGoogle:hover, .existLogin button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #ff91006a;
+    transition: .2s;
+}
+
+.existLogin{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.existLogin p{
+    color: #000;
+    font-weight: 700;
+}
+
+.existLogin button{
+    color: #ff9000;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 2px 5px;
+    margin-left: 15px;
+    width: 100px;
+    border: solid 1px #ff9000;
+    border-radius: 10px;
+}

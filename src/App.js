@@ -27,7 +27,7 @@ import EditProfile from './Pages/EditProfile/EditProfile';
 import Favorites from './Pages/Favorites/Favorites';
 
 //react, hooks, router dom
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import { useAuthentication } from './hooks/useAuthetication';
 import { useState, useEffect } from 'react';
 
@@ -63,8 +63,8 @@ function App() {
               <Route path='/about' element={<About/>}/>
               <Route path='/suport' element={<Suport/>}/>
 
-              <Route path='/login' element={<Login/>}/>
-              <Route path='/register' element={<Register/>}/>
+              <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
+              <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>
 
               <Route path='/editProfile' element={<EditProfile/>}/>
               <Route path='/favorites' element={<Favorites/>}/>
