@@ -35,6 +35,8 @@ const Login = () => {
 
       console.log(response)
 
+      alert("Email de recuperação de senha enviado com sucesso!")
+
       setEmail("")
       setPassword("")
     
@@ -66,7 +68,7 @@ const Login = () => {
                     </label>
 
                     <span className={styles.forgetPassword}>
-                      <NavLink><p>Esqueci minha senha</p></NavLink>
+                      <NavLink to="/forgotPassword"><p>Esqueceu sua senha?</p></NavLink>
                     </span>
 
                     {!loading && <button className={styles.btnLogin}>Entrar</button>}

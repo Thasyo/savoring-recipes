@@ -25,6 +25,7 @@ import Register from './Pages/Register/Register';
 import Suport from './Pages/Suport/Suport';
 import EditProfile from './Pages/EditProfile/EditProfile';
 import Favorites from './Pages/Favorites/Favorites';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 
 //react, hooks, router dom
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
@@ -65,6 +66,7 @@ function App() {
 
               <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>
+              <Route path='/forgotPassword' element={<ForgotPassword />}/>
 
               <Route path='/editProfile' element={<EditProfile/>}/>
               <Route path='/favorites' element={<Favorites/>}/>

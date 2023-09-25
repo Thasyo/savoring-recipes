@@ -5,8 +5,8 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     updateProfile,
-    SignOut,
-    signOut
+    signOut,
+    sendPasswordResetEmail
 } from 'firebase/auth'
 
 import {useState, useEffect} from 'react'
@@ -112,6 +112,36 @@ export const useAuthentication = () => {
 
     }
 
+    //função de redefinição de senha
+    const forgotPassword = async(email) => {
+
+        checkIfIsCancelled(true)
+
+        setLoading(true)
+        setError(null)
+
+        try {
+
+            await sendPasswordResetEmail(auth, email)
+            setLoading(false)
+            
+        } catch (error) {
+
+            let systemErrorMessage
+
+            if(error.message.includes("user-not-found")){
+                systemErrorMessage = 'Usuário não encontrado.'
+            }else{
+                systemErrorMessage = 'Ocorreu um problema, por favor, tente novamente mais tarde!'
+            }
+
+            setError(systemErrorMessage)
+            setLoading(false)
+            
+        }
+
+    }
+
     useEffect(() => {
         return () => setCancelled(true)
     }, [])
@@ -122,7 +152,8 @@ export const useAuthentication = () => {
         error,
         loading,
         logout,
-        login
+        login,
+        forgotPassword
     }
 
 }
