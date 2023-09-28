@@ -20,41 +20,41 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-        <NavLink to='/' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillHome className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/> Página Inicial</NavLink>
-        <NavLink className={styles.link} onClick={() => toogleCategories()}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Receitas <BiSolidRightArrow className={(isVisible ? styles.animationArrow : styles.iconNavBarArrow)}/></NavLink>
+        <NavLink to='/' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillHome className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/> Home Page</NavLink>
+        <NavLink className={styles.link} onClick={() => toogleCategories()}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Recipes <BiSolidRightArrow className={(isVisible ? styles.animationArrow : styles.iconNavBarArrow)}/></NavLink>
         <div className={isVisible ? styles.categories : styles.none}>
           <div>
-            <h2> <span className='title-border'></span>Tipos de Refeições</h2>
+            <h2> <span className='title-border'></span>Meal Types</h2>
             <ul>
-              <NavLink>Café da manhã</NavLink>
-              <NavLink>Entradas</NavLink>
-              <NavLink>Acompanhamentos</NavLink>
-              <NavLink>Diversos</NavLink>
-              <NavLink>Sobremesa</NavLink>
-              <NavLink>Massas</NavLink>
-              <NavLink>Frutos do Mar</NavLink>
-              <NavLink>Vegana</NavLink>
-              <NavLink>Vegetariana</NavLink>
+              <NavLink>Breakfast</NavLink>
+              <NavLink>Appetizer</NavLink>
+              <NavLink>Side</NavLink>
+              <NavLink>Miscellaneous</NavLink>
+              <NavLink>Dessert</NavLink>
+              <NavLink>Pasta</NavLink>
+              <NavLink>Seafood</NavLink>
+              <NavLink>Vegan</NavLink>
+              <NavLink>Vegetarian</NavLink>
             </ul>
           </div>
 
           <div>
-            <h2> <span className='title-border'></span>Tipos de Carnes</h2>
+            <h2> <span className='title-border'></span>Types of Meat</h2>
             <ul>
-              <NavLink> <span className={styles.borderCategories}></span> Carne Bovina</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Carne de Frango</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Carne de Cabra</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Carne de Cordeiro</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Carne de Porco</NavLink>
+              <NavLink> <span className={styles.borderCategories}></span> Beef</NavLink>
+              <NavLink> <span className={styles.borderCategories}></span> Chicken</NavLink>
+              <NavLink> <span className={styles.borderCategories}></span> Goat</NavLink>
+              <NavLink> <span className={styles.borderCategories}></span> Lamb</NavLink>
+              <NavLink> <span className={styles.borderCategories}></span> Pork</NavLink>
             </ul>
           </div>
         </div>
-        <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Receitas Customizadas</NavLink>
-        <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Comunidade</NavLink>
-        <NavLink to='/courses' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiDiploma className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Cursos</NavLink>
-        <NavLink to='/donate' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiHeartBeats className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Apoie Nosso Site</NavLink>
-        <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Quem Somos</NavLink>
-        <NavLink to='/suport' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Suporte</NavLink>
+        <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Custom Recipes</NavLink>
+        <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Comunity</NavLink>
+        <NavLink to='/courses' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiDiploma className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Courses</NavLink>
+        <NavLink to='/donate' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiHeartBeats className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Support Our Site</NavLink>
+        <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  About</NavLink>
+        <NavLink to='/suport' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Support</NavLink>
     </nav>
   )
 }

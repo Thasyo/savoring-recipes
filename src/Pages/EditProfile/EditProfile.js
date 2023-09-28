@@ -6,7 +6,7 @@ const EditProfile = () => {
   return (
     <div className={Styles.editProfile}>
         <Search/>
-        <h1>Editar Perfil</h1>
+        <h1>Profile Edit</h1>
     </div>
   )
 }

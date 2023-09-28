@@ -31,6 +31,7 @@ import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import { useAuthentication } from './hooks/useAuthetication';
 import { useState, useEffect } from 'react';
+import RecipesByCategory from './Pages/RecipesByCategory/RecipesByCategory';
 
 function App() {
 
@@ -63,6 +64,7 @@ function App() {
               <Route path='/Donate' element={<Donate/>}/>
               <Route path='/about' element={<About/>}/>
               <Route path='/suport' element={<Suport/>}/>
+              <Route path='/recipesByCategory' element={<RecipesByCategory/>}/>
 
               <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>

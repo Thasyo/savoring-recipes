@@ -53,32 +53,32 @@ const Login = () => {
       <Search/>
       <img src={bgRegister} alt="imagem de fundo da page de cadastro" />
       <div className={styles.infoLogin}>
-                <h1><IoLogIn className={styles.iconLoginTitle}/> Entrar</h1>
+                <h1><IoLogIn className={styles.iconLoginTitle}/>LOGIN</h1>
                 <form onSubmit={handleSubmit}>
 
                     <label>
                         <span>Email</span>
-                        <input type="email" name='email' required placeholder='Digite o seu email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" name='email' required placeholder='Your email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </label>
 
                     <label>
-                        <span>Senha</span>
-                        <input type="password" name='password' required placeholder='Insira a sua senha...' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <span>Password</span>
+                        <input type="password" name='password' required placeholder='Your password...' value={password} onChange={(e) => setPassword(e.target.value)}/>
                         {error && <p className='error'>{error}</p>}
                     </label>
 
                     <span className={styles.forgetPassword}>
-                      <NavLink to="/forgotPassword"><p>Esqueceu sua senha?</p></NavLink>
+                      <NavLink to="/forgotPassword"><p>Forgot your password?</p></NavLink>
                     </span>
 
-                    {!loading && <button className={styles.btnLogin}>Entrar</button>}
-                    {loading && <button className={styles.btnLogin} disabled  >Aguarde...</button>}
+                    {!loading && <button className={styles.btnLogin}>Enter</button>}
+                    {loading && <button className={styles.btnLogin} disabled  >Wait...</button>}
                     
                 </form>
 
                 <span className={styles.existLogin}>
-                    <p>Não tem uma conta? </p>
-                    <NavLink to='/register'><button>Criar uma</button></NavLink>
+                    <p>Don't have an account? </p>
+                    <NavLink to='/register'><button>Create one</button></NavLink>
                 </span>
 
             </div>

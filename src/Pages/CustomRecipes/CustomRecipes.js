@@ -6,7 +6,7 @@ const CustomRecipes = () => {
   return (
     <div className={styles.customRecipes}>
       <Search/>
-      <h1>Receitas Customizadas</h1>
+      <h1>Custom Recipes</h1>
     </div>
   )
 }

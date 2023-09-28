@@ -57,11 +57,11 @@ export const useAuthentication = () => {
             let systemErrorMessage
 
             if(error.message.includes('Password')){
-                systemErrorMessage = 'A senha precisa conter pelo menos 6 caracteres.'
+                systemErrorMessage = 'Password must contain at least 6 characters.'
             }else if(error.message.includes('email-already')){
-                systemErrorMessage = 'E-mail já cadastrado!'
+                systemErrorMessage = 'E-mail already registered!'
             }else{
-                systemErrorMessage = 'Ocorreu um erro, tente novamente mais tarde.'
+                systemErrorMessage = 'An error occurred, please try again later.'
             }
 
             setError(systemErrorMessage)
@@ -98,11 +98,11 @@ export const useAuthentication = () => {
             let systemErrorMessage
 
             if(error.message.includes("user-not-found")){
-                systemErrorMessage = 'Usuário não encontrado.'
+                systemErrorMessage = 'User not found.'
             }else if(error.message.includes("wrong-password")){
-                systemErrorMessage = 'Senha incorreta. Tente novamente'
+                systemErrorMessage = 'Incorrect password. Try again.'
             }else{
-                systemErrorMessage = 'Ocorreu um problema, por favor, tente mais tarde.'
+                systemErrorMessage = 'An error occurred, please try again later.'
             }
 
             setError(systemErrorMessage)
@@ -130,9 +130,9 @@ export const useAuthentication = () => {
             let systemErrorMessage
 
             if(error.message.includes("user-not-found")){
-                systemErrorMessage = 'Usuário não encontrado.'
+                systemErrorMessage = 'User not found.'
             }else{
-                systemErrorMessage = 'Ocorreu um problema, por favor, tente novamente mais tarde!'
+                systemErrorMessage = 'An error occurred, please try again later.'
             }
 
             setError(systemErrorMessage)

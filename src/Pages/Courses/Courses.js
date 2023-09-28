@@ -6,7 +6,7 @@ const Courses = () => {
   return (
     <div className={styles.courses}>
       <Search/>
-      <h1>Cursos</h1>
+      <h1>Courses</h1>
     </div>
   )
 }

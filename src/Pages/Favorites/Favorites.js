@@ -6,7 +6,7 @@ const Favorites = () => {
   return (
     <div className={Styles.favorites}>
         <Search/>
-        <h1>Favoritos</h1>
+        <h1>Favorites</h1>
     </div>
   )
 }

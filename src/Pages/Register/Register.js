@@ -63,44 +63,44 @@ const Register = () => {
         <Search/>
             <img src={bgRegister} alt="imagem de fundo da page de cadastro" />
             <div className={styles.infoRegister}>
-                <h1><IoLogIn className={styles.iconRegisteTitle}/> Cadastrar</h1>
+                <h1><IoLogIn className={styles.iconRegisteTitle}/> REGISTER</h1>
                 <div>
-                    <p>Crie uma conta e aproveite os serviços da Saboreando Receitas. Monte uma lista de receitas favoritas, envie comentários, participe da nossa Comunidade Chefzando e interaja com todos os usuários, divulgando e postando receitas, visitando receitas dos outros usuários e muito mais!</p>
+                    <p>Create an account and take advantage of Saboreando Recipes services. Create a list of favorite recipes, send comments, participate in our Chefzando Community and interact with all users, promoting and posting recipes, visiting other users' recipes and much more!</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        <span>Nome</span>
-                        <input type="text" name='displayName' required placeholder='Digite o seu nome...' value={displayName} onChange={(e) => setDisplayName(e.target.value)}/>
+                        <span>Name</span>
+                        <input type="text" name='displayName' required placeholder='Your name...' value={displayName} onChange={(e) => setDisplayName(e.target.value)}/>
                     </label>
 
                     <label>
                         <span>Email</span>
-                        <input type="email" name='email' required placeholder='Digite o seu email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" name='email' required placeholder='Your email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </label>
 
                     <label>
-                        <span>Senha</span>
-                        <input type="password" name='password' required placeholder='Insira a sua senha...' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <span>Password</span>
+                        <input type="password" name='password' required placeholder='Your password...' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </label>
 
                     <label className={styles.lastLabel}>
-                        <span>Confirmação de Senha</span>
-                        <input type="password" name='confirmPassword' required placeholder='Confirme a sua senha...' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+                        <span>Password Confirmation</span>
+                        <input type="password" name='confirmPassword' required placeholder='Confirm your password...' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                         {error && <p className='error'>{error}</p>}
                     </label>
 
-                    {!loading && <button className={styles.btnRegister}>Cadastrar</button>}
-                    {loading && <button className={styles.btnRegister} disabled  >Aguarde...</button>}
+                    {!loading && <button className={styles.btnRegister}>Register</button>}
+                    {loading && <button className={styles.btnRegister} disabled>Wait...</button>}
                     
                 </form>
 
                 <span className={styles.existLogin}>
-                    <p>Já tem uma conta? </p>
-                    <NavLink to='/login'><button>Entrar</button></NavLink>
+                    <p>Already have an account? </p>
+                    <NavLink to='/login'><button>Login</button></NavLink>
                 </span>
 
                 <div>
-                    <p>A Saboreando Receitas processa os dados coletados para a criação da sua área de usuário e da comunidade Chefzando. Para saber mais sobre como gerenciar seus dados pessoais e exercer seus direitos, consulte nossa Política de Proteção de Dados Pessoais.</p>
+                    <p>Saboreando Recipes processes the data collected to create its user area and the Chefzando community. To learn more about how to manage your personal data and exercise your rights, see our Personal Data Protection Policy.</p>
                 </div>
             </div>
     </div>

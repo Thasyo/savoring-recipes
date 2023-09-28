@@ -7,7 +7,7 @@ const Suport = () => {
   return (
     <div className={styles.suport}>
       <Search/>
-      <h1>Suporte</h1>
+      <h1>Suport</h1>
     </div>
   )
 }

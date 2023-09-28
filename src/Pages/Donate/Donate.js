@@ -6,7 +6,7 @@ const Donate = () => {
   return (
     <div className={styles.donate}>
       <Search/>
-      <h1>Doações</h1>
+      <h1>Donate</h1>
     </div>
   )
 }

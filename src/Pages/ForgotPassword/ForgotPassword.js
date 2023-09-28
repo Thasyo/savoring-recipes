@@ -42,22 +42,22 @@ const ForgotPassword = () => {
         <Search/>
         <img src={bgRegister} alt="imagem de fundo da page de cadastro" />
         <div className={styles.infoForgotPassword}>
-                <h1><IoLogIn className={styles.iconForgotPasswordTitle}/> Esqueceu sua senha?</h1>
+                <h1><IoLogIn className={styles.iconForgotPasswordTitle}/> Forgot Your Password?</h1>
                 <div>
-                    <p>Para redefinir sua senha, digite aqui seu endereço de e-mail.</p>
+                    <p>To reset your password, enter your email address here.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
 
                     <label>
                         <span>Email</span>
-                        <input type="email" name='email' required placeholder='Digite o seu email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="email" name='email' required placeholder='Your email...' value={email} onChange={(e) => setEmail(e.target.value)}/>
                         {error && <p className='error'>{error}</p>}
                     </label>
 
 
 
-                    {!loading && <button className={styles.btnForgotPassword}>Enviar</button>}
-                    {loading && <button className={styles.btnForgotPassword} disabled  >Aguarde...</button>}
+                    {!loading && <button className={styles.btnForgotPassword}>Send</button>}
+                    {loading && <button className={styles.btnForgotPassword} disabled  >Wait...</button>}
                     
                 </form>
         </div>

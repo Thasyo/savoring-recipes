@@ -123,8 +123,8 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <Search/>
-      <p className={styles.quote}>" Cozinhar é uma arte que envolve todos os sentidos. É a união de sabores, aromas, texturas e amor. "</p>
-      <h1><span className={styles.titleBorderCategory}>t</span> Café da manhã</h1>
+      <p className={styles.quote}>" Cooking is an art that involves all the senses. It is the union of flavors, aromas, textures and love. "</p>
+      <h1><span className={styles.titleBorderCategory}>t</span> Breakfast</h1>
       <div className={styles.containerCards}>
         <Swiper
             spaceBetween={30}
@@ -138,14 +138,14 @@ const Home = () => {
                 <div className={styles.recipeItem}>
                   <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                   <h3>{item.strMeal}</h3>
-                  <button className='btn-recipes'>Ver Receita</button>
+                  <input value="See Recipe" className='btn-recipes'/>
                 </div>
               </SwiperSlide>
-            )) : 'Carregando. . .'}
+            )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Acompanhamentos</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Side</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -159,14 +159,14 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <button className='btn-recipes'>Ver Receita</button>
+                      <input value="See Recipe" className='btn-recipes'/>
                     </div>
                   </SwiperSlide>
-                )) : 'Carregando. . .'}
+                )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Diversos</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Miscellaneous</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -180,14 +180,14 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <button className='btn-recipes'>Ver Receita</button>
+                      <input value="See Recipe" className='btn-recipes'/>
                     </div>
                   </SwiperSlide>
-                )) : 'Carregando. . .'}
+                )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Sobremesas</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Dessert</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -201,14 +201,14 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <button className='btn-recipes'>Ver Receita</button>
+                      <input value="See Recipe" className='btn-recipes'/>
                     </div>
                   </SwiperSlide>
-                )) : 'Carregando. . .'}
+                )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Massas</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Pasta</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -222,14 +222,14 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <button className='btn-recipes'>Ver Receita</button>
+                      <input value="See Recipe" className='btn-recipes'/>
                     </div>
                   </SwiperSlide>
-                )) : 'Carregando. . .'}
+                )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Frutos do mar</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Seafood</h1>
       <div className={styles.containerCards}>
         <Swiper
           spaceBetween={30}
@@ -243,14 +243,14 @@ const Home = () => {
               <div className={styles.recipeItem}>
                 <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                 <h3>{item.strMeal}</h3>
-                <button className='btn-recipes'>Ver Receita</button>
+                <input value="See Recipe" className='btn-recipes'/>
               </div>
             </SwiperSlide>
-          )) : 'Carregando. . .'}
+          )) : 'Wait a moment. . .'}
         </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Vegetariana</h1>
+      <h1><span className={styles.titleBorderCategory}>t</span> Vegetarian</h1>
       <div className={styles.containerCards}>
         <Swiper
             spaceBetween={30}
@@ -264,10 +264,10 @@ const Home = () => {
                 <div className={styles.recipeItem}>
                   <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                   <h3>{item.strMeal}</h3>
-                  <button className='btn-recipes'>Ver Receita</button>
+                  <input value="See Recipe" className='btn-recipes'/>
                 </div>
               </SwiperSlide>
-            )) : 'Carregando. . .'}
+            )) : 'Wait a moment. . .'}
           </Swiper>
       </div>
 
