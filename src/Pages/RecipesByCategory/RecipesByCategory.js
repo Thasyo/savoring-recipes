@@ -1,4 +1,4 @@
-import React from 'react'
+import { useParams } from 'react-router-dom';
 
 import styles from '../RecipesByCategory/RecipesByCategory.module.css'
 
@@ -6,114 +6,39 @@ import Search from '../../components/Search/Search'
 
 import { AiFillHeart } from "react-icons/ai";
 
-
-import bgRegister from '../../assets/bg-register-and-login.jpg'
+import { useEffect, useState } from 'react';
 
 const RecipesByCategory = () => {
+
+    const {categoryName} = useParams();
+
+    const urlCategory = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`;
+    const [item, setItem] = useState()
+
+    useEffect(() => {
+
+        fetch(urlCategory).then(res=> res.json()).then(data=>{
+            console.log(data.meals);
+            setItem(data.meals);
+        })
+
+    }, [urlCategory]);
+
   return (
     <div className={styles.recipesByCategory}>
         <Search/>
-        <h1><span className={styles.titleBorderCategory}>t</span> Category name</h1>
+        <h1><span className={styles.titleBorderCategory}>t</span> {categoryName}</h1>
         <div className={styles.container}>
 
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
+            {item ? item.map((item) => (
+                <div className={styles.containerRecipes}>
+                    <div className={styles.cardRecipes}>
+                        <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
+                        <AiFillHeart className={styles.AiFillHeart}/>
+                        <h3>{item.strMeal}</h3>
+                    </div>
                 </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
-
-            <div className={styles.containerRecipes}>
-                <div className={styles.cardRecipes}>
-                    <div><img src={bgRegister} alt="recipe picture" /></div>
-                    <AiFillHeart className={styles.AiFillHeart}/>
-                    <h3>Recipe Title</h3>
-                    <input value="See Recipe" className={styles.btnRecipes}/>
-                </div>
-            </div>
+            )) : '' }
 
         </div>
     </div>

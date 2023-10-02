@@ -9,7 +9,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 const Home = () => {
 
   //requisição para as receitas da categoria "café da manhã"
-  const urlBreakfast = "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast";
+  const urlBreakfast = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
   const [itemBreakfastCategory, setItemBreakfastCategory] = useState();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Home = () => {
 
 
   //requisição para as receitas da categoria "Acompanhamentos"
-  const urlSide = "https://www.themealdb.com/api/json/v1/1/filter.php?c=side";
+  const urlSide = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Side";
   const [itemSideCategory, setItemSideCategory] = useState();
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const Home = () => {
 
 
   //requisição para as receitas da categoria "sobremesa"
-  const urlDessert = "https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert";
+  const urlDessert = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert";
   const [itemDessertCategory, setItemDessertCategory] = useState();
 
   useEffect(() => {

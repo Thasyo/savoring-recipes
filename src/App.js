@@ -64,7 +64,7 @@ function App() {
               <Route path='/Donate' element={<Donate/>}/>
               <Route path='/about' element={<About/>}/>
               <Route path='/suport' element={<Suport/>}/>
-              <Route path='/recipesByCategory' element={<RecipesByCategory/>}/>
+              <Route path='/recipesByCategory/:categoryName' element={<RecipesByCategory/>}/>
 
               <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>

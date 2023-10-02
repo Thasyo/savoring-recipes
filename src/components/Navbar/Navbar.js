@@ -26,26 +26,26 @@ const Navbar = () => {
           <div>
             <h2> <span className='title-border'></span>Meal Types</h2>
             <ul>
-              <NavLink>Breakfast</NavLink>
-              <NavLink>Appetizer</NavLink>
-              <NavLink>Side</NavLink>
-              <NavLink>Miscellaneous</NavLink>
-              <NavLink>Dessert</NavLink>
-              <NavLink>Pasta</NavLink>
-              <NavLink>Seafood</NavLink>
-              <NavLink>Vegan</NavLink>
-              <NavLink>Vegetarian</NavLink>
+              <NavLink to="/recipesByCategory/Breakfast" >Breakfast</NavLink>
+              <NavLink to="/recipesByCategory/Starter" >Starter</NavLink>
+              <NavLink to="/recipesByCategory/Side" >Side</NavLink>
+              <NavLink to="/recipesByCategory/Miscellaneous" >Miscellaneous</NavLink>
+              <NavLink to="/recipesByCategory/Dessert" >Dessert</NavLink>
+              <NavLink to="/recipesByCategory/Pasta" >Pasta</NavLink>
+              <NavLink to="/recipesByCategory/Seafood" >Seafood</NavLink>
+              <NavLink to="/recipesByCategory/Vegan" >Vegan</NavLink>
+              <NavLink to="/recipesByCategory/Vegetarian" >Vegetarian</NavLink>
             </ul>
           </div>
 
           <div>
             <h2> <span className='title-border'></span>Types of Meat</h2>
             <ul>
-              <NavLink> <span className={styles.borderCategories}></span> Beef</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Chicken</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Goat</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Lamb</NavLink>
-              <NavLink> <span className={styles.borderCategories}></span> Pork</NavLink>
+              <NavLink to="/recipesByCategory/Beef" >Beef</NavLink>
+              <NavLink to="/recipesByCategory/Chicken" >Chicken</NavLink>
+              <NavLink to="/recipesByCategory/Goat" >Goat</NavLink>
+              <NavLink to="/recipesByCategory/Lamb" >Lamb</NavLink>
+              <NavLink to="/recipesByCategory/Pork" >Pork</NavLink>
             </ul>
           </div>
         </div>
