@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { useNavigate } from 'react-router-dom'
+
 import styles from '../Home/Home.module.css'
 
 import Search from '../../components/Search/Search'
@@ -7,6 +9,8 @@ import Search from '../../components/Search/Search'
 import {Swiper, SwiperSlide} from 'swiper/react'
 
 const Home = () => {
+
+  let navigate = useNavigate();
 
   //requisição para as receitas da categoria "café da manhã"
   const urlBreakfast = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
@@ -138,7 +142,7 @@ const Home = () => {
                 <div className={styles.recipeItem}>
                   <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                   <h3>{item.strMeal}</h3>
-                  <input value="See Recipe" className='btn-recipes'/>
+                  <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                 </div>
               </SwiperSlide>
             )) : 'Wait a moment. . .'}
@@ -159,7 +163,7 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <input value="See Recipe" className='btn-recipes'/>
+                      <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
                   </SwiperSlide>
                 )) : 'Wait a moment. . .'}
@@ -180,7 +184,7 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <input value="See Recipe" className='btn-recipes'/>
+                      <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
                   </SwiperSlide>
                 )) : 'Wait a moment. . .'}
@@ -201,7 +205,7 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <input value="See Recipe" className='btn-recipes'/>
+                      <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
                   </SwiperSlide>
                 )) : 'Wait a moment. . .'}
@@ -222,7 +226,7 @@ const Home = () => {
                     <div className={styles.recipeItem}>
                       <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                       <h3>{item.strMeal}</h3>
-                      <input value="See Recipe" className='btn-recipes'/>
+                      <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
                   </SwiperSlide>
                 )) : 'Wait a moment. . .'}
@@ -243,7 +247,7 @@ const Home = () => {
               <div className={styles.recipeItem}>
                 <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                 <h3>{item.strMeal}</h3>
-                <input value="See Recipe" className='btn-recipes'/>
+                <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
               </div>
             </SwiperSlide>
           )) : 'Wait a moment. . .'}
@@ -264,7 +268,7 @@ const Home = () => {
                 <div className={styles.recipeItem}>
                   <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                   <h3>{item.strMeal}</h3>
-                  <input value="See Recipe" className='btn-recipes'/>
+                  <button className='btn-recipes' onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                 </div>
               </SwiperSlide>
             )) : 'Wait a moment. . .'}

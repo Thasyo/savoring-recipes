@@ -57,13 +57,13 @@
 .cardRecipes div img{
     width: 100%;
     height: 100%;   
-    filter: brightness(0.4);
+    filter: brightness(0.6);
 }
 
 .cardRecipes div img:hover{
     scale: 1.05;
     transition: .7s;
-    filter: brightness(0.8);
+    filter: brightness(0.85);
     cursor: pointer;
 }
 
@@ -73,6 +73,12 @@
     position: relative;
     bottom: 235px;
     left: 115px;
+}
+
+.AiFillHeart:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
 }
 
 .cardRecipes h3{
@@ -85,4 +91,25 @@
     text-align: center;
     position: relative;
     bottom: 170px;
+}
+
+.btnRecipes{
+    background-color: #ff9000;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 5px 10px;
+    position: sticky;
+    bottom: 10px;
+}
+
+.btnRecipes:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.3s;
+    color: #8383836f;
 }

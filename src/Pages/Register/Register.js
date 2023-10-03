@@ -100,7 +100,7 @@ const Register = () => {
                 </span>
 
                 <div>
-                    <p>Saboreando Recipes processes the data collected to create its user area and the Chefzando community. To learn more about how to manage your personal data and exercise your rights, see our Personal Data Protection Policy.</p>
+                    <p>Saboreando Receitas processes the data collected to create its user area and the Chefzando community. To learn more about how to manage your personal data and exercise your rights, see our Personal Data Protection Policy.</p>
                 </div>
             </div>
     </div>

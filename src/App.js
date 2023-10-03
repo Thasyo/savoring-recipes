@@ -32,6 +32,7 @@ import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import { useAuthentication } from './hooks/useAuthetication';
 import { useState, useEffect } from 'react';
 import RecipesByCategory from './Pages/RecipesByCategory/RecipesByCategory';
+import RecipeInfo from './Pages/RecipeInfo/RecipeInfo';
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
               <Route path='/about' element={<About/>}/>
               <Route path='/suport' element={<Suport/>}/>
               <Route path='/recipesByCategory/:categoryName' element={<RecipesByCategory/>}/>
+              <Route path='/recipeInfo/:idMeal' element={<RecipeInfo/>} />
 
               <Route path='/login' element={!user ? <Login/> : <Navigate to="/"/>}/>
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>
