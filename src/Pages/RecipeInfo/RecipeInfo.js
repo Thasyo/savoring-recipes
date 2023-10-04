@@ -33,15 +33,18 @@ const RecipeInfo = () => {
                 <>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> {item.strMeal}</h1>
-                    {item.strYoutube ? (
-                        <div className={styles.containerVideo}>
-                            <iframe src={item.strYoutube} frameborder="0" title='recipe-video'></iframe>
-                        </div>
-                    ) : (
+                    <div className={styles.containerImgVideo}>
                         <div className={styles.containerImg}>
-                            <img src={item.strMealThumb} alt="recipe image" />
+                            <img src={item.strMealThumb} alt={item.strMeal} />
                         </div>
-                    )}
+                        { item.strYoutube ? (
+                            <div className={styles.containerVideo}>
+                                <h2>Want to have a better experience?</h2>
+                                <p>Watch the recipe video </p>
+                                <a href={item.strYoutube} target='_blank' rel="noreferrer">Watch video</a>
+                            </div>
+                        ) : '' }
+                    </div>
 
                     <div>
                         <button className={styles.btnFavorite}> <AiFillHeart className={styles.AiFillHeart} /> <span>Favorite</span></button>
