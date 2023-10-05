@@ -8,6 +8,7 @@ import Search from '../../components/Search/Search'
 
 import { AiFillHeart } from "react-icons/ai";
 import { FaInfinity } from "react-icons/fa6";
+import { MdRestaurantMenu } from "react-icons/md";
 
 
 const RecipeInfo = () => {
@@ -51,13 +52,36 @@ const RecipeInfo = () => {
                     </div>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> Ingredients</h1>
-                    <div>
-                        <p>detalhes dos ingredientes</p>
-                    </div>
+                    <ul className={styles.containerIngredients}>
+                        <div>
+                            {item.strIngredient1 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient1} - {item.strMeasure1}</span></li>) : ''}
+                            {item.strIngredient2 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient2} - {item.strMeasure2}</span></li>) : ''}
+                            {item.strIngredient3 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient3} - {item.strMeasure3}</span></li>) : ''}
+                            {item.strIngredient4 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient4} - {item.strMeasure4}</span></li>) : ''}
+                            {item.strIngredient5 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient5} - {item.strMeasure5}</span></li>) : ''}
+                            {item.strIngredient6 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient6} - {item.strMeasure6}</span></li>) : ''}
+                            {item.strIngredient7 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient7} - {item.strMeasure7}</span></li>) : ''}
+                            {item.strIngredient8 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient8} - {item.strMeasure8}</span></li>) : ''}
+                            {item.strIngredient9 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient9} - {item.strMeasure9}</span></li>) : ''}
+                            {item.strIngredient10 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient10} - {item.strMeasure10}</span></li>) : ''}
+                        </div>
+                        <div>
+                            {item.strIngredient11 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient11} - {item.strMeasure11}</span></li>) : ''}
+                            {item.strIngredient12 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient12} - {item.strMeasure12}</span></li>) : ''}
+                            {item.strIngredient13 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient13} - {item.strMeasure13}</span></li>) : ''}
+                            {item.strIngredient14 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient14} - {item.strMeasure14}</span></li>) : ''}
+                            {item.strIngredient15 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient15} - {item.strMeasure15}</span></li>) : ''}
+                            {item.strIngredient16 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient16} - {item.strMeasure16}</span></li>) : ''}
+                            {item.strIngredient17 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient17} - {item.strMeasure17}</span></li>) : ''}
+                            {item.strIngredient18 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient18} - {item.strMeasure18}</span></li>) : ''}
+                            {item.strIngredient19 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient19} - {item.strMeasure19}</span></li>) : ''}
+                            {item.strIngredient20 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient20} - {item.strMeasure20}</span></li>) : ''}
+                        </div>
+                    </ul>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> Method of preparation</h1>
-                    <div>
-                        <p>detalhes do modo de preparo</p>
+                    <div className={styles.containerInstructions}>
+                        <p>{item.strInstructions}</p>
                     </div>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> Comments and Ratings</h1>
