@@ -85,27 +85,26 @@ const RecipeInfo = () => {
                     </div>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> Comments and Ratings</h1>
-                    <div>
-                        <p>Leave a comment on the recipe and help us improve your experience with our recipes every day! The team at Saboreando Recipes thanks you!</p>
-                    </div>
-                    <div>
-                        <form>
+                    <div className={styles.containerComments}>
+                        <div>
+                            <p>Leave a comment on the recipe and help us improve your experience with our recipes every day! The team at Saboreando Receitas thanks you!</p>
+                        </div>
+                        <form className={styles.containerForm}>
                             <label>
-                                <textarea cols="30" rows="10"></textarea>
+                                <textarea cols="30" rows="6" placeholder='Leave your comment here. . .'></textarea>
                             </label>
-
-                            <label>
-                                <span>Name</span>
-                                <input type="text" />
-                            </label>
-
-                            <label>
-                                <span>Email</span>
-                                <input type="email" />
-                            </label>
-
+                            <div>
+                                <label>
+                                    <span>Name</span>
+                                    <input type="text" placeholder='Enter your name here. . .'/>
+                                </label>
+                                <label>
+                                    <span>Email</span>
+                                    <input type="email" placeholder='Enter your email here. . .'/>
+                                </label>
+                            </div>
                             <button className={styles.btnComments}>Enviar</button>
-                        </form>
+                        </form>    
                     </div>
 
                     <div>
