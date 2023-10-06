@@ -110,7 +110,7 @@
 .containerVideo a:hover{
     transition: .1s;
     transform: scale(1.01);
-    box-shadow: 0px 0px 5px #ff9000;
+    box-shadow: 0px 0px 3px #ff9000;
 }
 
 .containerIngredients{
@@ -150,9 +150,13 @@
 }
 
 .containerComments{
+    width: 70%;
     display: flex;
     flex-direction: column;
     color: #ff9000;
+    border-bottom: solid 1px #ff9000;
+    box-shadow: 0px 1px 0px #ff9000;
+    padding-bottom: 20px;
 }
 
 .containerComments div{
@@ -163,7 +167,7 @@
     font-weight: 700;
     font-style: italic;
     text-align: justify;
-    width: 50%;
+    width: 100%;
     margin-left: 20px;
 }
 
@@ -195,6 +199,10 @@ textarea::placeholder{
     flex-direction: column;
 }
 
+.containerComments div label span{
+    font-weight: 700;
+}
+
 .containerComments div label input{
     border: solid 1px #ff9000;
     border-radius: 10px;
@@ -224,4 +232,64 @@ textarea::placeholder{
     transform: scale(1.01);
     box-shadow: 0px 0px 2px #ff9000;
     cursor: pointer;
+}
+
+.containerUsersComments{
+    width: 70%;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ff91007f;
+}
+
+.infoUserComments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileAndName{
+    color: #ff9000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CgProfile{
+    font-size: 2.5em;
+}
+
+.profileAndName p {
+    color: #b3936a;
+    margin: 5px 0px;
+}
+
+.containerLikeDislike{
+    color: #ff9000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.containerLikeDislike span span{
+    color: #b3936a;
+}
+
+.contentComments{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    border: none;
+    box-shadow: 0px 0px 3px #b3936a;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.contentComments p{
+    padding: 5px;
+    width: 100%;
+    text-align: justify;
 }

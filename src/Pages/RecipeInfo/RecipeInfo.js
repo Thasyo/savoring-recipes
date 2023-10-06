@@ -9,6 +9,8 @@ import Search from '../../components/Search/Search'
 import { AiFillHeart } from "react-icons/ai";
 import { FaInfinity } from "react-icons/fa6";
 import { MdRestaurantMenu } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { AiFillLike, AiFillDislike } from "react-icons/ai";
 
 
 const RecipeInfo = () => {
@@ -107,17 +109,36 @@ const RecipeInfo = () => {
                         </form>    
                     </div>
 
-                    <div>
-                        <div>
-                            <img src="#" alt="#" />
-                            <div>
-                                <p>like</p>
-                                <p>deslike</p>
+                    <div className={styles.containerUsersComments}>
+                            <div className={styles.infoUserComments}>
+                                <div className={styles.profileAndName}>
+                                    <CgProfile className={styles.CgProfile}/>
+                                    <p>Username</p>
+                                </div>
+                                <div className={styles.containerLikeDislike}>
+                                    <span> <AiFillLike/> <span>0</span> </span>
+                                    <span> <AiFillDislike/> <span>0</span> </span>
+                                </div>
                             </div>
-                            <div>
-                                <p>comentario fictício</p>
+                            <div className={styles.contentComments}>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem quis. Commodi reiciendis cupiditate ullam, similique, alias praesentium a labore explicabo tempora ut, quidem ea libero odio tempore corporis et?</p>
                             </div>
-                        </div>
+                    </div>
+
+                    <div className={styles.containerUsersComments}>
+                            <div className={styles.infoUserComments}>
+                                <div className={styles.profileAndName}>
+                                    <CgProfile className={styles.CgProfile}/>
+                                    <p>Username</p>
+                                </div>
+                                <div className={styles.containerLikeDislike}>
+                                    <span> <AiFillLike/> <span>0</span> </span>
+                                    <span> <AiFillDislike/> <span>0</span> </span>
+                                </div>
+                            </div>
+                            <div className={styles.contentComments}>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium hic ea temporibus asperiores, omnis impedit velit tempora. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, quia non? Labore, at dignissimos! Earum minus cum corrupti, a provident corporis, dolorem quia perferendis commodi facilis minima nesciunt! Ea, architecto? Recusandae dolorem at autem temporibus. Perspiciatis cumque animi recusandae laboriosam impedit ut similique!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores minus aut, perferendis nemo numquam maxime provident, ipsam temporibus ratione impedit, praesentium nisi accusamus dolor sapiente? Nesciunt harum dolor quia unde.</p>
+                            </div>
                     </div>
 
                 </>
