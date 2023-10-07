@@ -1,7 +1,7 @@
 .recipeInfo{
     width: 85vw;
     height: 100vh;
-    margin-left: 230px;
+    margin-left: 215px;
 }
 
 .titleBorderCategory{
@@ -9,7 +9,7 @@
     height: 20px;
     background-color: #ff9000;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-left: 30px;
 }
 
 .recipeInfo h1{
@@ -193,7 +193,7 @@ textarea::placeholder{
     margin-left: 0;
 }
 
-.containerComments div label{
+ .containerComments div label{
     margin-right: 20px;
     display: flex;
     flex-direction: column;
@@ -201,13 +201,14 @@ textarea::placeholder{
 
 .containerComments div label span{
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .containerComments div label input{
     border: solid 1px #ff9000;
     border-radius: 10px;
     padding: 5px;
-    width: 250px;
+    width: 215px;
 }
 
 .containerComments div label input::placeholder{
@@ -223,6 +224,7 @@ textarea::placeholder{
     border: none;
     width: 100px;
     text-align: center;
+    margin-top: 20px;
     padding: 8px;
     border-radius: 12px;
 }
@@ -237,15 +239,17 @@ textarea::placeholder{
 .containerUsersComments{
     width: 70%;
     display: flex;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: solid 1px #ff91007f;
 }
 
 .infoUserComments{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 20%;
 }
 
 .profileAndName{
@@ -261,8 +265,10 @@ textarea::placeholder{
 }
 
 .profileAndName p {
+    width: 100%;
     color: #b3936a;
     margin: 5px 0px;
+    text-align: center;
 }
 
 .containerLikeDislike{
@@ -270,9 +276,8 @@ textarea::placeholder{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 5px 0px;
 }
 
 .containerLikeDislike span span{
@@ -280,7 +285,6 @@ textarea::placeholder{
 }
 
 .contentComments{
-    margin-top: 30px;
     margin-bottom: 5px;
     border: none;
     box-shadow: 0px 0px 3px #b3936a;
@@ -289,7 +293,9 @@ textarea::placeholder{
 }
 
 .contentComments p{
-    padding: 5px;
+    color: #ff9000;
+    font-style: italic;
+    padding: 15px;
     width: 100%;
     text-align: justify;
 }

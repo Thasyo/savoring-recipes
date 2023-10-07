@@ -15,6 +15,7 @@ import { AiFillLike, AiFillDislike } from "react-icons/ai";
 
 const RecipeInfo = () => {
 
+    //retrieving info from the selected recipe.
     const { idMeal } = useParams();
 
     const urlRecipeInfo = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
@@ -100,10 +101,6 @@ const RecipeInfo = () => {
                                     <span>Name</span>
                                     <input type="text" placeholder='Enter your name here. . .'/>
                                 </label>
-                                <label>
-                                    <span>Email</span>
-                                    <input type="email" placeholder='Enter your email here. . .'/>
-                                </label>
                             </div>
                             <button className={styles.btnComments}>Enviar</button>
                         </form>    
@@ -113,7 +110,7 @@ const RecipeInfo = () => {
                             <div className={styles.infoUserComments}>
                                 <div className={styles.profileAndName}>
                                     <CgProfile className={styles.CgProfile}/>
-                                    <p>Username</p>
+                                    <p>Thasyo Peres</p>
                                 </div>
                                 <div className={styles.containerLikeDislike}>
                                     <span> <AiFillLike/> <span>0</span> </span>
@@ -129,7 +126,7 @@ const RecipeInfo = () => {
                             <div className={styles.infoUserComments}>
                                 <div className={styles.profileAndName}>
                                     <CgProfile className={styles.CgProfile}/>
-                                    <p>Username</p>
+                                    <p>Luana Liberato</p>
                                 </div>
                                 <div className={styles.containerLikeDislike}>
                                     <span> <AiFillLike/> <span>0</span> </span>
@@ -137,7 +134,7 @@ const RecipeInfo = () => {
                                 </div>
                             </div>
                             <div className={styles.contentComments}>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium hic ea temporibus asperiores, omnis impedit velit tempora. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, quia non? Labore, at dignissimos! Earum minus cum corrupti, a provident corporis, dolorem quia perferendis commodi facilis minima nesciunt! Ea, architecto? Recusandae dolorem at autem temporibus. Perspiciatis cumque animi recusandae laboriosam impedit ut similique!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores minus aut, perferendis nemo numquam maxime provident, ipsam temporibus ratione impedit, praesentium nisi accusamus dolor sapiente? Nesciunt harum dolor quia unde.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem quis. Commodi reiciendis cupiditate ullam, similique, alias praesentium a labore explicabo tempora ut, quidem ea libero odio tempore corporis et?</p>
                             </div>
                     </div>
 
