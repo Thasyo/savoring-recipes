@@ -102,7 +102,7 @@ const RecipeInfo = () => {
                                     <input type="text" placeholder='Enter your name here. . .'/>
                                 </label>
                             </div>
-                            <button className={styles.btnComments}>Enviar</button>
+                            <button className={styles.btnComments}>Send</button>
                         </form>    
                     </div>
 
@@ -111,22 +111,6 @@ const RecipeInfo = () => {
                                 <div className={styles.profileAndName}>
                                     <CgProfile className={styles.CgProfile}/>
                                     <p>Thasyo Peres</p>
-                                </div>
-                                <div className={styles.containerLikeDislike}>
-                                    <span> <AiFillLike/> <span>0</span> </span>
-                                    <span> <AiFillDislike/> <span>0</span> </span>
-                                </div>
-                            </div>
-                            <div className={styles.contentComments}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem quis. Commodi reiciendis cupiditate ullam, similique, alias praesentium a labore explicabo tempora ut, quidem ea libero odio tempore corporis et?</p>
-                            </div>
-                    </div>
-
-                    <div className={styles.containerUsersComments}>
-                            <div className={styles.infoUserComments}>
-                                <div className={styles.profileAndName}>
-                                    <CgProfile className={styles.CgProfile}/>
-                                    <p>Luana Liberato</p>
                                 </div>
                                 <div className={styles.containerLikeDislike}>
                                     <span> <AiFillLike/> <span>0</span> </span>
