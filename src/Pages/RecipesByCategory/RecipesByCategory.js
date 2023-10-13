@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import styles from '../RecipesByCategory/RecipesByCategory.module.css'
 
@@ -10,6 +10,8 @@ import { FaInfinity } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
 
 const RecipesByCategory = () => {
+
+    let navigate = useNavigate();
 
     const {categoryName} = useParams();
 
@@ -37,7 +39,7 @@ const RecipesByCategory = () => {
                         <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
                         <AiFillHeart className={styles.AiFillHeart}/>
                         <h3>{item.strMeal}</h3>
-                        <button className={styles.btnRecipes}>See Recipe</button>
+                        <button className={styles.btnRecipes} onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
                 </div>
             )) : <div className='loadingPage'><FaInfinity/></div> }

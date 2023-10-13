@@ -9,8 +9,8 @@ import Search from '../../components/Search/Search'
 import { AiFillHeart } from "react-icons/ai";
 import { FaInfinity } from "react-icons/fa6";
 import { MdRestaurantMenu } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { AiFillLike, AiFillDislike } from "react-icons/ai";
+/* import { CgProfile } from "react-icons/cg";
+import { AiFillLike, AiFillDislike } from "react-icons/ai"; */
 
 
 const RecipeInfo = () => {
@@ -87,7 +87,11 @@ const RecipeInfo = () => {
                         <p>{item.strInstructions}</p>
                     </div>
 
-                    <h1><span className={styles.titleBorderCategory}>t</span> Comments and Ratings</h1>
+                    <div>
+                        <span className={styles.bottomOutLine}>g</span>
+                    </div>
+
+                    {/* <h1><span className={styles.titleBorderCategory}>t</span> Comments and Ratings</h1>
                     <div className={styles.containerComments}>
                         <div>
                             <p>Leave a comment on the recipe and help us improve your experience with our recipes every day! The team at Saboreando Receitas thanks you!</p>
@@ -120,7 +124,7 @@ const RecipeInfo = () => {
                             <div className={styles.contentComments}>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem quis. Commodi reiciendis cupiditate ullam, similique, alias praesentium a labore explicabo tempora ut, quidem ea libero odio tempore corporis et?</p>
                             </div>
-                    </div>
+                    </div> */}
 
                 </>
             ) : (

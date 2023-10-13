@@ -297,3 +297,8 @@ textarea::placeholder{
     width: 100%;
     text-align: justify;
 }
+
+.bottomOutLine{
+    margin: 50x 0;
+    color: #00000000;
+}

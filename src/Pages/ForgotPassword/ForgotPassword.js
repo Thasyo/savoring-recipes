@@ -27,6 +27,8 @@ const ForgotPassword = () => {
 
         console.log(response)
 
+        alert("Password recovery email sent successfully!")
+
         setEmail("")
     }
 

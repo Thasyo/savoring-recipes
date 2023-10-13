@@ -23,7 +23,6 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Suport from './Pages/Suport/Suport';
-import EditProfile from './Pages/EditProfile/EditProfile';
 import Favorites from './Pages/Favorites/Favorites';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 
@@ -72,7 +71,6 @@ function App() {
               <Route path='/register' element={!user ? <Register/> : <Navigate to="/"/>}/>
               <Route path='/forgotPassword' element={<ForgotPassword />}/>
 
-              <Route path='/editProfile' element={<EditProfile/>}/>
               <Route path='/favorites' element={<Favorites/>}/>
             </Routes>
           </BrowserRouter>

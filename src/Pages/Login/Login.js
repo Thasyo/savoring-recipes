@@ -35,8 +35,6 @@ const Login = () => {
 
       console.log(response)
 
-      alert("Email de recuperação de senha enviado com sucesso!")
-
       setEmail("")
       setPassword("")
     
