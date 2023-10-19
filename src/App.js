@@ -32,6 +32,7 @@ import { useAuthentication } from './hooks/useAuthetication';
 import { useState, useEffect } from 'react';
 import RecipesByCategory from './Pages/RecipesByCategory/RecipesByCategory';
 import RecipeInfo from './Pages/RecipeInfo/RecipeInfo';
+import SearchFood from './Pages/SearchFood/SearchFood';
 
 function App() {
 
@@ -64,6 +65,7 @@ function App() {
               <Route path='/Donate' element={<Donate/>}/>
               <Route path='/about' element={<About/>}/>
               <Route path='/suport' element={<Suport/>}/>
+              <Route path='/:search' element={<SearchFood/>} />
               <Route path='/recipesByCategory/:categoryName' element={<RecipesByCategory/>}/>
               <Route path='/recipeInfo/:idMeal' element={<RecipeInfo/>} />
 
