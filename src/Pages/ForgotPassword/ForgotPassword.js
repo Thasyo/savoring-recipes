@@ -16,6 +16,7 @@ const ForgotPassword = () => {
     const [email, setEmail] = useState('')
     const [error, setError] = useState('')
 
+
     const {forgotPassword, error: authError, loading} = useAuthentication()
 
     const handleSubmit = async(e) => {
@@ -25,9 +26,7 @@ const ForgotPassword = () => {
 
         const response = await forgotPassword(email);
 
-        console.log(response)
-
-        alert("Password recovery email sent successfully!")
+        console.log(response);
 
         setEmail("")
     }

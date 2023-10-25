@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { useAuthentication } from '../../hooks/useAuthetication';
 
-
 //styles
 import styles from '../Register/Register.module.css'
 

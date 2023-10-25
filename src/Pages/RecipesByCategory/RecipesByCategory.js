@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useInsertDocument } from '../../hooks/useInsertDocument';
 
 import styles from '../RecipesByCategory/RecipesByCategory.module.css'
 
@@ -8,6 +9,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { FaInfinity } from "react-icons/fa6";
 
 import { useEffect, useState } from 'react';
+import { useAuthValue } from '../../context/AuthContext';
 
 const RecipesByCategory = () => {
 
@@ -27,6 +29,27 @@ const RecipesByCategory = () => {
 
     }, [urlCategory]);
 
+    const { insertDocument } = useInsertDocument('favorites');
+    const {user} = useAuthValue();
+
+    const handleAddFavorites = (recipeId, recipeName, recipeImage) => {
+
+        if(user){
+
+            insertDocument({
+                userId: user.uid,
+                userName: user.displayName,
+                recipeId: recipeId,
+                recipeName: recipeName,
+                recipeImage: recipeImage 
+            })
+
+        }else{
+            navigate("/register")
+        }
+
+    }
+
   return (
     <div className={styles.recipesByCategory}>
         <Search/>
@@ -37,7 +60,7 @@ const RecipesByCategory = () => {
                 <div className={styles.containerRecipes} key={item.idMeal}>
                     <div className={styles.cardRecipes}>
                         <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
-                        <AiFillHeart className={styles.AiFillHeart}/>
+                        <AiFillHeart className={styles.AiFillHeart} onClick={() => handleAddFavorites(item.idMeal, item.strMeal, item.strMealThumb)}/>
                         <h3>{item.strMeal}</h3>
                         <button className={styles.btnRecipes} onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
                     </div>
