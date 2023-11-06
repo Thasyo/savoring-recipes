@@ -69,7 +69,7 @@
 }
 
 .AiFillHeart{
-    color: #fff;
+    color: #ffffff;
     font-size: 30px;
     position: relative;
     bottom: 235px;
@@ -77,6 +77,20 @@
 }
 
 .AiFillHeart:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.AiFillHeartFavorite{
+    color: #ff9000;
+    font-size: 30px;
+    position: relative;
+    bottom: 235px;
+    left: 115px;
+}
+
+.AiFillHeartFavorite:hover{
     transform: scale(1.1);
     transition: .2s;
     cursor: pointer;

@@ -16,33 +16,64 @@ const RecipesByCategory = () => {
     let navigate = useNavigate();
 
     const {categoryName} = useParams();
+    const {user} = useAuthValue();
+    const { insertDocument } = useInsertDocument('favorites');
+
+    const [item, setItem] = useState();
 
     const urlCategory = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`;
-    const [item, setItem] = useState();
 
     useEffect(() => {
 
         fetch(urlCategory).then(res=> res.json()).then(data=>{
-            console.log(data.meals);
-            setItem(data.meals);
+            //for e criar uma classe anonima adicionando isFavorite
+            let jurema =  data.meals.map(i => {
+                return {
+                    userId: user.uid,
+                    userName: user.displayName,
+                    recipeId: i.idMeal,
+                    recipeName: i.strMeal,
+                    recipeImage: i.strMealThumb,
+                    isFavorite: false
+                }
+                
+            });
+
+            console.log("olha eu aqui")
+            setItem(jurema);
         })
 
     }, [urlCategory]);
-
-    const { insertDocument } = useInsertDocument('favorites');
-    const {user} = useAuthValue();
+    
 
     const handleAddFavorites = (recipeId, recipeName, recipeImage) => {
 
         if(user){
 
-            insertDocument({
+            const favoritedRecipe = {
                 userId: user.uid,
                 userName: user.displayName,
                 recipeId: recipeId,
                 recipeName: recipeName,
-                recipeImage: recipeImage 
-            })
+                recipeImage: recipeImage,
+                isFavorite: true,
+            }
+
+            insertDocument({favoritedRecipe})
+
+            //find na lista pelo id e setar o isFavorite para true
+            const recipeIds = item.map((i) => i.recipeId);
+            
+            for (let i = 0; i < recipeIds.length; i++) {
+
+                if(recipeId === recipeIds[i]){
+                    item[i].isFavorite = true;
+                    console.log(item[i].isFavorite)
+                }
+
+            }
+
+            console.log(item)
 
         }else{
             navigate("/register")
@@ -57,12 +88,15 @@ const RecipesByCategory = () => {
         <div className={styles.container}>
 
             {item ? item.map((item) => (
-                <div className={styles.containerRecipes} key={item.idMeal}>
+                <div className={styles.containerRecipes} key={item.recipeId}>
                     <div className={styles.cardRecipes}>
-                        <div><img src={item.strMealThumb} alt={item.strMeal} /></div>
-                        <AiFillHeart className={styles.AiFillHeart} onClick={() => handleAddFavorites(item.idMeal, item.strMeal, item.strMealThumb)}/>
-                        <h3>{item.strMeal}</h3>
-                        <button className={styles.btnRecipes} onClick={() => navigate(`/recipeInfo/${item.idMeal}`)}>See Recipe</button>
+                        <div><img src={item.recipeImage} alt={item.recipeName} /></div>
+                        <AiFillHeart 
+                            className={!item.isFavorite ? styles.AiFillHeart : styles.AiFillHeartFavorite} //add validacao do isFavorite
+                            onClick={() => handleAddFavorites(item.recipeId, item.recipeName, item.recipeImage)}
+                        />
+                        <h3>{item.recipeName}</h3>
+                        <button className={styles.btnRecipes} onClick={() => navigate(`/recipeInfo/${item.recipeId}`)}>See Recipe</button>
                     </div>
                 </div>
             )) : <div className='loadingPage'><FaInfinity/></div> }

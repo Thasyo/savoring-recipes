@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import styles from '../RecipeInfo/RecipeInfo.module.css'
 
@@ -12,11 +12,15 @@ import { MdRestaurantMenu } from "react-icons/md";
 /* import { CgProfile } from "react-icons/cg";
 import { AiFillLike, AiFillDislike } from "react-icons/ai"; */
 
+import { useAuthValue } from '../../context/AuthContext';
+import { useInsertDocument } from '../../hooks/useInsertDocument';
+
 
 const RecipeInfo = () => {
 
     //retrieving info from the selected recipe.
     const { idMeal } = useParams();
+    let navigate = useNavigate();
 
     const urlRecipeInfo = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
     const [item, setItem] = useState();
@@ -29,6 +33,29 @@ const RecipeInfo = () => {
         })
 
     }, [urlRecipeInfo]);
+
+    const { insertDocument } = useInsertDocument('favorites');
+    const {user} = useAuthValue();
+
+    const handleAddFavorites = (recipeId, recipeName, recipeImage) => {
+
+        if(user){
+
+            insertDocument({
+                userId: user.uid,
+                userName: user.displayName,
+                recipeId: recipeId,
+                recipeName: recipeName,
+                recipeImage: recipeImage 
+            })
+
+            
+
+        }else{
+            navigate("/register")
+        }
+
+    }
 
     return (
         <div className={styles.recipeInfo}>
@@ -51,7 +78,7 @@ const RecipeInfo = () => {
                     </div>
 
                     <div>
-                        <button className={styles.btnFavorite}> <AiFillHeart className={styles.AiFillHeart} /> <span>Favorite</span></button>
+                        <button className={styles.btnFavorite} onClick={() => handleAddFavorites(item.idMeal, item.strMeal, item.strMealThumb)}> <AiFillHeart className={styles.AiFillHeart} /> <span>Favorite</span></button>
                     </div>
 
                     <h1><span className={styles.titleBorderCategory}>t</span> Ingredients</h1>

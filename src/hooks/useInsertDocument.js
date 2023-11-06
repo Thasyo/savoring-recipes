@@ -37,6 +37,7 @@ export const useInsertDocument = (docCollection) => {
 
     }
 
+    //inserindo doc no banco de dados
     const insertDocument = async (document) => {
 
         checkCancelBeforeDispatch({
@@ -45,14 +46,12 @@ export const useInsertDocument = (docCollection) => {
 
         try {
 
-            console.log(document)
-
             const insertedDocument = await addDoc(
                 collection(db, docCollection),
                 document
             )
 
-            console.log(insertedDocument, document)
+            console.log(insertedDocument)
 
             checkCancelBeforeDispatch({
                 type: 'INSERTED_DOC',
