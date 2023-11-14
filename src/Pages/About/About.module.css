@@ -3,3 +3,43 @@
     height: 100vh;
     margin-left: 230px;
 }
+
+.titleBorderCategory{
+    width: 10px;
+    height: 20px;
+    background-color: #ff9000;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.about h1{
+    color: #ff9000;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 60%;
+    border: solid 1px #83838383;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container div{
+    color: #838383;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.container div ul{
+    color: #ff9000;
+}
+
+.container div ul li{
+    margin-bottom: 10px;
+}
