@@ -1,0 +1,48 @@
+.suport{
+    width: 85vw;
+    height: 100vh;
+    margin-left: 230px;
+}
+
+.titleBorderCategory{
+    width: 10px;
+    height: 20px;
+    background-color: #ff9000;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.suport h1{
+    color: #ff9000;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 60%;
+    border: solid 1px #83838383;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.subtitle p{
+    color: #838383a0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.contact{
+    color: #838383f9;
+    font-weight: 700;
+}
+
+.contact div{
+    display: flex;
+    margin: 30px 0px;
+}

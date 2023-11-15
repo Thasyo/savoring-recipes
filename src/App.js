@@ -22,17 +22,18 @@ import Donate from './Pages/Donate/Donate';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
-import Suport from './Pages/Suport/Suport';
 import Favorites from './Pages/Favorites/Favorites';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import Support from './Pages/Support/Support';
+import RecipesByCategory from './Pages/RecipesByCategory/RecipesByCategory';
+import RecipeInfo from './Pages/RecipeInfo/RecipeInfo';
+import SearchFood from './Pages/SearchFood/SearchFood';
 
 //react, hooks, router dom
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import { useAuthentication } from './hooks/useAuthetication';
 import { useState, useEffect } from 'react';
-import RecipesByCategory from './Pages/RecipesByCategory/RecipesByCategory';
-import RecipeInfo from './Pages/RecipeInfo/RecipeInfo';
-import SearchFood from './Pages/SearchFood/SearchFood';
+
 
 function App() {
 
@@ -64,7 +65,7 @@ function App() {
               <Route path='/courses' element={<Courses/>}/>
               <Route path='/Donate' element={<Donate/>}/>
               <Route path='/about' element={<About/>}/>
-              <Route path='/suport' element={<Suport/>}/>
+              <Route path='/support' element={<Support/>}/>
               <Route path='/:search' element={<SearchFood/>} />
               <Route path='/recipesByCategory/:categoryName' element={<RecipesByCategory/>}/>
               <Route path='/recipeInfo/:idMeal' element={<RecipeInfo/>} />
