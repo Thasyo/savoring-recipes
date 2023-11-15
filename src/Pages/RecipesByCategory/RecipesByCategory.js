@@ -29,8 +29,6 @@ const RecipesByCategory = () => {
             //for e criar uma classe anonima adicionando isFavorite
             let jurema =  data.meals.map(i => {
                 return {
-                    userId: user.uid,
-                    userName: user.displayName,
                     recipeId: i.idMeal,
                     recipeName: i.strMeal,
                     recipeImage: i.strMealThumb,
@@ -91,10 +89,10 @@ const RecipesByCategory = () => {
                 <div className={styles.containerRecipes} key={item.recipeId}>
                     <div className={styles.cardRecipes}>
                         <div><img src={item.recipeImage} alt={item.recipeName} /></div>
-                        <AiFillHeart 
+                        {/* <AiFillHeart 
                             className={!item.isFavorite ? styles.AiFillHeart : styles.AiFillHeartFavorite} //add validacao do isFavorite
                             onClick={() => handleAddFavorites(item.recipeId, item.recipeName, item.recipeImage)}
-                        />
+                        /> */}
                         <h3>{item.recipeName}</h3>
                         <button className={styles.btnRecipes} onClick={() => navigate(`/recipeInfo/${item.recipeId}`)}>See Recipe</button>
                     </div>

@@ -64,7 +64,7 @@ const Register = () => {
             <div className={styles.infoRegister}>
                 <h1><IoLogIn className={styles.iconRegisteTitle}/> REGISTER</h1>
                 <div>
-                    <p>Create an account and take advantage of Saboreando Recipes services. Create a list of favorite recipes, send comments, participate in our Chefzando Community and interact with all users, promoting and posting recipes, visiting other users' recipes and much more!</p>
+                    <p>Create an account and take advantage of Savoring Recipes services. Create a list of favorite recipes, send comments, participate in our Chefzando Community and interact with all users, promoting and posting recipes, visiting other users' recipes and much more!</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <label>
@@ -99,7 +99,7 @@ const Register = () => {
                 </span>
 
                 <div>
-                    <p>Saboreando Receitas processes the data collected to create its user area and the Chefzando community. To learn more about how to manage your personal data and exercise your rights, see our Personal Data Protection Policy.</p>
+                    <p>Savoring Recipes processes the data collected to create its user area and the Chefzando community. To learn more about how to manage your personal data and exercise your rights, see our Personal Data Protection Policy.</p>
                 </div>
             </div>
     </div>
