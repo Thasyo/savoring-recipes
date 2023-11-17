@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-        <NavLink to='/' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillHome className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/> Home Page</NavLink>
-        <NavLink className={styles.link} onClick={() => toogleCategories()}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Recipes <BiSolidRightArrow className={(isVisible ? styles.animationArrow : styles.iconNavBarArrow)}/></NavLink>
+        <NavLink to='/' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillHome className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/> <span className={styles.shortcutsName}>Home Page</span></NavLink>
+        <NavLink className={styles.link} onClick={() => toogleCategories()}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Recipes</span> <BiSolidRightArrow className={(isVisible ? styles.animationArrow : styles.iconNavBarArrow)}/></NavLink>
         <div className={isVisible ? styles.categories : styles.none}>
           <div>
             <h2> <span className='title-border'></span>Meal Types</h2>
@@ -49,12 +49,12 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Custom Recipes</NavLink>
-        <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Community</NavLink>
-        <NavLink to='/courses' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiDiploma className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Courses</NavLink>
-        <NavLink to='/donate' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiHeartBeats className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Support Our Site</NavLink>
-        <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  About</NavLink>
-        <NavLink to='/support' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  Support</NavLink>
+        <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Custom Recipes</span></NavLink>
+        <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Community</span></NavLink>
+        <NavLink to='/courses' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiDiploma className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Courses</span></NavLink>
+        <NavLink to='/donate' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiHeartBeats className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Support Our Site</span></NavLink>
+        <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>About</span></NavLink>
+        <NavLink to='/support' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Support</span></NavLink>
     </nav>
   )
 }
