@@ -3,3 +3,92 @@
     height: 100vh;
     margin-left: 230px;
 }
+
+.titleBorderCategory{
+    width: 10px;
+    height: 20px;
+    background-color: #ff9000;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.donate h1{
+    color: #ff9000;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 70%;
+    border: solid 1px #83838383;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h2{
+    color: #838383e5;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.supportHeart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container h3{
+    color: #ff9000;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.AiFillHeart{
+    color: #ff9000;
+    font-size: 1.5em;
+}
+
+.descriptionDonate{
+    display: flex;
+    flex-direction: column;
+    color: #838383;
+}
+
+.descriptionDonate p{
+    margin-bottom: 15px;
+}
+
+.btn{
+    border: none;
+    border-radius: 10px;
+    background-color: #ff9000;
+    color: #ffffff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 5px #83838361;
+    cursor: pointer;
+}
+
+.btn span{
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+.AiFillHeartBtn{
+    color: #ffffff;
+    font-size: 1.5em;
+}
