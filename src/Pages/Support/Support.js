@@ -17,13 +17,7 @@ const Support = () => {
 
         <div className={styles.contact}>
           <div>
-            <p>To get in touch with opinions, questions, criticisms, compliments and feature suggestions, send an email to <a href="#">Aqui vai ficar o email</a></p>
-          </div>
-          <div>
-            <p>For commercial contacts, send an email to <a href="#">Aqui vai ficar o email</a></p>
-          </div>
-          <div>
-            <p>Regarding your personal data and privacy, send an email to <a href="#">Aqui vai ficar o email</a></p>
+            <p>To get in touch with opinions, questions, criticisms, compliments, feature suggestions, for commercial contacts or to find out more about your personal data and privacy, send an email to <a href="mailto:savoringrecipes@gmail.com" >savoringrecipes@gmail.com</a></p>
           </div>
         </div>
       </div>
