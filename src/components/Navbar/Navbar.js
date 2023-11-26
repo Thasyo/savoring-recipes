@@ -4,7 +4,7 @@ import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
 
 import { AiFillHome, AiFillQuestionCircle } from "react-icons/ai";
-import { GiCookingPot, GiCook, GiDiploma, GiHeartBeats} from "react-icons/gi";
+import { GiCookingPot, GiCook, GiDiploma} from "react-icons/gi";
 import { HiInformationCircle } from "react-icons/hi";
 import { BiSolidRightArrow } from "react-icons/bi";
 
@@ -52,7 +52,6 @@ const Navbar = () => {
         <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Custom Recipes</span></NavLink>
         <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Community</span></NavLink>
         <NavLink to='/courses' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiDiploma className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Courses</span></NavLink>
-        <NavLink to='/donate' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiHeartBeats className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Support Our Site</span></NavLink>
         <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>About</span></NavLink>
         <NavLink to='/support' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Support</span></NavLink>
     </nav>
