@@ -4,7 +4,7 @@ import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
 
 import { AiFillHome, AiFillQuestionCircle } from "react-icons/ai";
-import { GiCookingPot, GiCook, GiDiploma} from "react-icons/gi";
+import { GiCookingPot, GiCook} from "react-icons/gi";
 import { HiInformationCircle } from "react-icons/hi";
 import { BiSolidRightArrow } from "react-icons/bi";
 

@@ -1,23 +1,23 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useInsertDocument } from '../../hooks/useInsertDocument';
+/* import { useInsertDocument } from '../../hooks/useInsertDocument'; */
 
 import styles from '../RecipesByCategory/RecipesByCategory.module.css'
 
 import Search from '../../components/Search/Search'
 
-import { AiFillHeart } from "react-icons/ai";
+/* import { AiFillHeart } from "react-icons/ai"; */
 import { FaInfinity } from "react-icons/fa6";
 
 import { useEffect, useState } from 'react';
-import { useAuthValue } from '../../context/AuthContext';
+/* import { useAuthValue } from '../../context/AuthContext'; */
 
 const RecipesByCategory = () => {
 
     let navigate = useNavigate();
 
     const {categoryName} = useParams();
-    const {user} = useAuthValue();
-    const { insertDocument } = useInsertDocument('favorites');
+    /* const {user} = useAuthValue();
+    const { insertDocument } = useInsertDocument('favorites'); */
 
     const [item, setItem] = useState();
 
@@ -44,7 +44,7 @@ const RecipesByCategory = () => {
     }, [urlCategory]);
     
 
-    const handleAddFavorites = (recipeId, recipeName, recipeImage) => {
+    /* const handleAddFavorites = (recipeId, recipeName, recipeImage) => {
 
         if(user){
 
@@ -77,7 +77,7 @@ const RecipesByCategory = () => {
             navigate("/register")
         }
 
-    }
+    } */
 
   return (
     <div className={styles.recipesByCategory}>
