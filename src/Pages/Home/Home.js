@@ -128,7 +128,7 @@ const Home = () => {
     <div className={styles.home}>
       <Search/>
       <p className={styles.quote}>" Cooking is an art that involves all the senses. It is the union of flavors, aromas, textures and love. "</p>
-      <h1><span className={styles.titleBorderCategory}>t</span> Breakfast</h1>
+      <h1>Breakfast</h1>
       <div className={styles.containerCards}>
         <Swiper
             spaceBetween={30}
@@ -149,7 +149,7 @@ const Home = () => {
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Side</h1>
+      <h1>Side</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -170,7 +170,7 @@ const Home = () => {
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Miscellaneous</h1>
+      <h1>Miscellaneous</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -191,7 +191,7 @@ const Home = () => {
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Dessert</h1>
+      <h1>Dessert</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -212,7 +212,7 @@ const Home = () => {
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Pasta</h1>
+      <h1>Pasta</h1>
       <div className={styles.containerCards}>
         <Swiper
                 spaceBetween={30}
@@ -233,7 +233,7 @@ const Home = () => {
           </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Seafood</h1>
+      <h1>Seafood</h1>
       <div className={styles.containerCards}>
         <Swiper
           spaceBetween={30}
@@ -254,7 +254,7 @@ const Home = () => {
         </Swiper>
       </div>
 
-      <h1><span className={styles.titleBorderCategory}>t</span> Vegetarian</h1>
+      <h1>Vegetarian</h1>
       <div className={styles.containerCards}>
         <Swiper
             spaceBetween={30}

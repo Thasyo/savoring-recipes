@@ -25,7 +25,7 @@ const SearchFood = () => {
   return (
     <div className={styles.searchFood}>
         <Search/>
-        <h1><span className={styles.titleBorderCategory}>t</span> {search}</h1>
+        <h1>{search}</h1>
         <div className={styles.container}>
 
             {item ? item.map((item) => (

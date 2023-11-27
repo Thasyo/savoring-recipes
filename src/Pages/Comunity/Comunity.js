@@ -6,7 +6,7 @@ const Comunity = () => {
   return (
     <div className={styles.comunity}>
       <Search/>
-      <h1><span className={styles.titleBorderCategory}>t</span> ChefZando</h1>
+      <h1>ChefZando</h1>
       <div className={styles.container}>
 
         <div>

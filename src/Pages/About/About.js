@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className={styles.about}>
       <Search/>
-      <h1><span className={styles.titleBorderCategory}>t</span> About</h1>
+      <h1>About</h1>
       <div className={styles.container}>
         <div>
           <p>Savoring Recipes is a growing website that aims to provide an unforgettable experience for its users with recipes from many different cultures and countries.</p>

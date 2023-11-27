@@ -7,7 +7,7 @@ const Support = () => {
   return (
     <div className={styles.suport}>
       <Search/>
-      <h1><span className={styles.titleBorderCategory}>t</span> About</h1>
+      <h1>Support</h1>
       <div className={styles.container}>
         <div className={styles.subtitle}>
           <p>

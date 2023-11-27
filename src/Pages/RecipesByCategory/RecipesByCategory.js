@@ -82,7 +82,7 @@ const RecipesByCategory = () => {
   return (
     <div className={styles.recipesByCategory}>
         <Search/>
-        <h1><span className={styles.titleBorderCategory}>t</span> {categoryName}</h1>
+        <h1>{categoryName}</h1>
         <div className={styles.container}>
 
             {item ? item.map((item) => (

@@ -33,7 +33,7 @@ const RecipeInfo = () => {
             {item ? (
                 <>
 
-                    <h1><span className={styles.titleBorderCategory}>t</span> {item.strMeal}</h1>
+                    <h1>{item.strMeal}</h1>
                     <div className={styles.containerImgVideo}>
                         <div className={styles.containerImg}>
                             <img src={item.strMealThumb} alt={item.strMeal} />
@@ -51,7 +51,7 @@ const RecipeInfo = () => {
                         <button className={styles.btnFavorite} onClick={() => handleAddFavorites(item.idMeal, item.strMeal, item.strMealThumb)}> <AiFillHeart className={styles.AiFillHeart} /> <span>Favorite</span></button>
                     </div> */}
 
-                    <h1><span className={styles.titleBorderCategory}>t</span> Ingredients</h1>
+                    <h1>Ingredients</h1>
                     <ul className={styles.containerIngredients}>
                         <div>
                             {item.strIngredient1 ? (<li> <MdRestaurantMenu className={styles.MdRestaurantMenu}/> <span>{item.strIngredient1} - {item.strMeasure1}</span></li>) : ''}
@@ -79,7 +79,7 @@ const RecipeInfo = () => {
                         </div>
                     </ul>
 
-                    <h1><span className={styles.titleBorderCategory}>t</span> Method of preparation</h1>
+                    <h1>Method of preparation</h1>
                     <div className={styles.containerInstructions}>
                         <p>{item.strInstructions}</p>
                     </div>
