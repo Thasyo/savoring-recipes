@@ -16,7 +16,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 //pages
 import About from './Pages/About/About';
 import Comunity from './Pages/Comunity/Comunity';
-import Courses from './Pages/Courses/Courses';
 import CustomRecipes from './Pages/CustomRecipes/CustomRecipes';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -61,7 +60,6 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='/customRecipes' element={<CustomRecipes/>}/>
               <Route path='/comunity' element={<Comunity/>}/>
-              <Route path='/courses' element={<Courses/>}/>
               <Route path='/about' element={<About/>}/>
               <Route path='/support' element={<Support/>}/>
               <Route path='/:search' element={<SearchFood/>} />
