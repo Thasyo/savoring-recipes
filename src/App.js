@@ -11,6 +11,7 @@ import { AuthProvider } from './context/AuthContext';
 
 //firebase
 import { onAuthStateChanged } from 'firebase/auth';
+import { db } from './firebase/config';
 
 
 //pages
