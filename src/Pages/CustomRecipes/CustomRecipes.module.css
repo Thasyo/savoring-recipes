@@ -3,3 +3,13 @@
     height: 100vh;
     margin-left: 230px;
 }
+
+.customRecipes h1{
+    color: #ff9000;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
