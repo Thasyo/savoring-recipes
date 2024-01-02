@@ -49,7 +49,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Custom Recipes</span></NavLink>
+        {/* <NavLink to='/customRecipes' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCookingPot className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Custom Recipes</span></NavLink> */}
         <NavLink to='/comunity' className={({isActive}) => (isActive ? styles.active : styles.link)}> <GiCook className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Community</span></NavLink>
         <NavLink to='/about' className={({isActive}) => (isActive ? styles.active : styles.link)}> <HiInformationCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>About</span></NavLink>
         <NavLink to='/support' className={({isActive}) => (isActive ? styles.active : styles.link)}> <AiFillQuestionCircle className={({isActive}) => (isActive ? styles.iconNavBarActive : styles.iconNavBar)}/>  <span className={styles.shortcutsName}>Support</span></NavLink>

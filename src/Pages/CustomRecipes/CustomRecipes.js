@@ -1,11 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Search from '../../components/Search/Search'
 import styles from '../CustomRecipes/CustomRecipes.module.css'
 import { configOpenai } from '../../openai/config'
 
 const CustomRecipes = () => {
 
+  const [ingredients, setIngredients] = useState('')
+  const [generatedRecipe, setGeneratedRecipe] = useState('')
+
   const {api_key, url} = configOpenai;
+
+  const generateRecipe = async (api_key, url, prompt) => {
+    
+    const requestOptions =  {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${api_key}` 
+      },
+      body: JSON.stringify({
+        prompt: `Crie uma receita com os seguintes ingredientes: ${prompt}.`,
+        max_tokens: 200,
+        temperature: 0.7
+      })
+    }
+
+    try {
+
+      const response = await fetch(url, requestOptions)
+
+      if(!response.ok){
+        throw new Error(`Erro na solicitação: ${response.status}`)
+      }
+
+      const data = await response.json()
+      const generatedRecipe = data.choices[0].text
+
+      setGeneratedRecipe(generatedRecipe)
+
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+
+  }
   
   return (
     <div className={styles.customRecipes}>
@@ -24,13 +61,19 @@ const CustomRecipes = () => {
           <h2>What ingredients do you have available?</h2>
           <form>
             <label>
-              <textarea cols="5" rows="5" placeholder='Enter the ingredients you have available, for example: rice, chicken, salt, parsley. . .'></textarea>
+              <textarea cols="5" rows="5" placeholder='Enter the ingredients you have available, for example: rice, chicken, salt, parsley. . .' value={ingredients} onChange={(e) => setIngredients(e.target.value)}></textarea>
             </label>
           </form>
-          <button>Generate</button>
+          <button onClick={() => generateRecipe(api_key, url, ingredients)}>Generate</button>
         </div>
 
-        <div className={styles.responseGenerated}></div>
+        <div className={styles.responseGenerated}>
+          {generatedRecipe && (
+            <div>
+              <p>{generatedRecipe}</p>
+            </div>
+          )}
+        </div>
 
       </div>
     </div>

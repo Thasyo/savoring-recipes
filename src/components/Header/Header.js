@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
         <div className={styles.logo}>
-            <NavLink to='/'><img src={logo} alt="Picture da saboreando receitas" /></NavLink>
+            <NavLink to='/'><img src={logo} alt="saboreando receitas" /></NavLink>
         </div>
         <Navbar/>
     </header>
